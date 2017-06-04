@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Bulletin</title>
+	</head>
+
+	<body>
+
+		<table>
+			<% for (let i = 0; i < title.length; i++) { %>
+				<tr>
+					<td><%= title[i].id %></td>
+					<td><%= title[i].title %></td>
+					<td><%= title[i].body %></td>
+					<td><%= title[i].created %></td>
+				</tr>
+			<% } %>
+		</table>
+
+		<a href="http://localhost:3000/login">Go to Add</a>
+	</body>
+</html>
