@@ -29,8 +29,8 @@ app.get("/", function(req, res) {
 	renderMessages(res);
 });
 
-app.get("/login", function(req, res) {
-	res.render("login", {
+app.get("/add", function(req, res) {
+	res.render("add", {
 		title: req.body.title,
 		body: req.body.body,
 	});
