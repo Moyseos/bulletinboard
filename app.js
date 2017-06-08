@@ -3,6 +3,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const Bulletin = require("./util/bulletin");
+
+
+// Setup the public assets to live in the assets folder
+app.use(express.static("assets"));
 // Set the default view engine to EJS, which means
 // we don't have to specify ".ejs" in render paths
 app.set("view engine", "ejs");
@@ -11,8 +15,7 @@ app.set("view engine", "ejs");
 // <form> POSTs. The json one handles jQuery POSTs.
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
-// Setup the public assets to live in the assets folder
-app.use(express.static("assets"));
+
 
 function renderMessages(res, body) {
 	Bulletin.getAll()
