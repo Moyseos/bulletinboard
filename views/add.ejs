@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>BulletinBoard</title>
-</head>
-<body>
+	<html>
+		<head>
+				<title>BulletinBoard</title>
+			<link rel="stylesheet" type="text/css" href="/reset.css"/>
+			<link rel="stylesheet" type="text/css" href="/style.css"/>
+		</head>
+	<body>
 
-<form action="/" method="post">
-			<input type="text" name="title" placeholder="title"/>
-			<input type="text" name="body" placeholder="body"/>
-			<button>Add</button>
+		<form class="add-form" action="/" method="post">
+			<input class="input-title" type="text" name="title" placeholder="Title"/>
+		</br>
+			<textarea class="input-body" type="text" name="body" placeholder="Your message here"></textarea>
+		</br>
+				<button class="add-btn">Add</button>
 		</form>
 
-		<a href="/">Message Board</a>
-</body>
-</html>
+				<button class="add-main-btn"><a href="/">Message Board</a></button>
+	</body>
+	</html>
